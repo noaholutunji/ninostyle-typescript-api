@@ -3,13 +3,13 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import 'dotenv/config';
 import userRouter from './routers/user';
-import campgroundRouter from './routers/product';
+import productRouter from './routers/product';
 const app: Application = express();
 
 app.use(express.json());
 app.use(cors());
 app.use(userRouter);
-app.use(campgroundRouter);
+app.use(productRouter);
 
 const URL: string = process.env.MONGODB_URL || '';
 

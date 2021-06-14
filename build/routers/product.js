@@ -99,7 +99,7 @@ router.get('/products/:id', function (req, res) {
         res.status(500).send();
     });
 });
-// Update a campground by id
+
 router.patch('/products/:id', auth_1.default, function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var updates, allowedUpdates, isValidOperation, product, e_2;
     return __generator(this, function (_a) {

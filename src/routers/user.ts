@@ -11,7 +11,6 @@ router.post(
 
     try {
       const data: IUser = await user.save();
-      // const token = await user.generateAuthToken();
       res.status(201).send({ user: data });
     } catch (e) {
       res.status(400).send(e);

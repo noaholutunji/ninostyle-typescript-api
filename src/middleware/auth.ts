@@ -14,7 +14,7 @@ const auth = async (
   next: NextFunction
 ): Promise<void> => {
   try {
-    const token = req.header('Authorization').replace('Bearer ', '');
+    const token = req.header('Authorization').replace('Bearer', '');
     const decoded: string | object | any = jwt.verify(
       token,
       process.env.JWT_SECRET || ''
