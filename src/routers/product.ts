@@ -47,7 +47,6 @@ router.get('/products/:id', (req: IRequest, res: Response) => {
     });
 });
 
-// Update a campground by id
 router.patch('/products/:id', auth, async (req: IRequest, res: Response) => {
   const updates = Object.keys(req.body);
   const allowedUpdates = ['name', 'brand', 'price', 'image', 'description'];
